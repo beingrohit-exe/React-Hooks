@@ -1,4 +1,4 @@
-const Field = ({label, type}) => {
+const Field = ({label, type, value, onChange}) => {
     return (
         // <div className='field-div'>
         //     <span>{props.label}</span>
@@ -7,7 +7,7 @@ const Field = ({label, type}) => {
 
         <div className='field-div'>
             <span>{label}</span>
-            <input type={type}/>
+            <input type={type} value={value} onChange={onChange}/>
         </div>
     )
 }

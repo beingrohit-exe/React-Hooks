@@ -3,8 +3,9 @@
     width: 100vw;
     background-color: aqua;
     display: flex;
+    flex-direction: row;
     align-items: center; /* flex-end, flex-start */
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .login-div {
@@ -46,4 +47,57 @@
     border: none;
     background-color: #000000;
     color: #e7eae7;
+}
+
+.buttons {
+    flex: 1;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 200ms ease, color 200ms ease, border 200ms ease;
+}
+
+.buttons:first-child {
+    background-color: transparent;
+    border: 1px solid #f5f5f5;
+    color: #f5f5f5;
+}
+
+.buttons:nth-child(2) {
+    background-color: #f5f5f5;
+    border: 1px solid transparent;
+}
+
+.buttons:first-child:hover {
+    background-color: #f5f5f5;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.buttons:last-child:hover {
+    background-color: transparent;
+    color: #f5f5f5;
+    border: 1px solid #f5f5f5;
+}
+
+.buttons:active {
+    opacity: 0.8;
+}
+
+.login-div:last-child {
+    padding: 40px 20px;
+}
+
+.user-data {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-data span:first-child {
+    font-size: 20px;
+    color: #f5f5f5;
+}
+
+.user-data span:last-child {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.6);
 }
